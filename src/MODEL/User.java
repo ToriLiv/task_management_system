@@ -8,8 +8,12 @@ public class User {
         this.name = name;
     }
 
-    //metodo get
+    //method get
     public String getName() {
         return name;
+    }
+
+    public String toString() {
+        return "User: " + name;
     }
 }

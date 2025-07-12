@@ -1,11 +1,14 @@
 package MODEL;
 
 public class Task {
-    private String title; //titulo de la tarea
-    private String description; //descripcion de la tarea
-    private TaskStatus status; //estado de la tarea
-    private User assignedUser; //usuario asignado
+    private String title; //title of the task
+    private String description; //description of the task
+    private TaskStatus status; //status of the task (PENDING, IN PROGRESS, COMPLETED)
+    private User assignedUser; //user assigned to the task
 
+    /*========SINGLE RESPONSABILITY PRINCIPLE (SRP)============
+     * this class correctly focuses on task data and relates getters/setters only
+     * */
 
     //CONSTRUCTOR
     public Task(String title, String description) {
@@ -47,9 +50,9 @@ public class Task {
         this.assignedUser = assignedUser;
     }
 
-    //metodo string
+    //method string
     @Override
     public String toString(){
-        return "Tarea: " + title + "" + "\nEstado: " + status + "\nDescripcion: " + description +  "\nAsignado a: " + (assignedUser != null? assignedUser.getName() : "Nadie");
+        return "--------------------------------------------------------------------" + "\nTask: " + title + "" + "\nStatus: " + status + "\nDescription: " + description +  "\nAssigned to: " + (assignedUser != null? assignedUser.getName() : "No user assigned" + "\n--------------------------------------------------------------------");
     }
 }

@@ -2,7 +2,7 @@ package INTERFACES;
 
 import MODEL.Task;
 
-//interface segregation principle & single responsability
+//-----------INTERFACE SEGREGATION PRINCIPLE AND SINGLE RESPONSABILITY PRINCIPLE------------
 public interface ITaskCreator {
     Task createTask(String title, String description);
 }
